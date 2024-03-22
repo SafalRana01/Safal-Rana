@@ -1,0 +1,106 @@
+style.css
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600&display=swap');
+
+.outer-class{
+    background-color: transparent;
+    width: 90%;
+    max-width: 300px;
+    height: 420px;
+    perspective: 1000px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.outer-class:hover .inner-class{
+    transform: rotateY(-180deg);
+}
+
+.inner-class{
+    background-image: linear-gradient(180deg, #5271FF 65%, #F9CE34 35%);
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+
+.front-section, .back-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.front-section{
+    gap: 20px;
+}
+
+.front-section img{
+    height: 250px;
+    width: auto;
+    /* filter: drop-shadow(4px 4px 0 #F9CE34)
+            drop-shadow(-4px 4px 0 #F9CE34)
+            drop-shadow(4px -4px 0 #F9CE34)
+            drop-shadow(-4px -4px 0 #F9CE34); */
+}
+
+.front-section h1{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.back-section{
+    gap: 10px;
+    transform: rotateY(180deg);
+}
+
+.back-section h1{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.back-section a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 250px;
+    height: 70px;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.back-section a:hover{
+    transform: scale(1.05);
+}
+
+.back-section a i{
+    font-size: 25px;
+}
+
+
+
+
+/* Made with '🖤' by Code Fed */
